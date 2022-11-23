@@ -1,0 +1,55 @@
+@import './base.css';
+/* = = = = = = = = = = = = = = = = */
+/* WRAPPER                         */
+/* = = = = = = = = = = = = = = = = */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* = = = = = = = = = = = = = = = = */
+/* HEADER                          */
+/* = = = = = = = = = = = = = = = = */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    padding: 50px 30px;
+    background-color: #191919;
+}
+
+header * {
+    color: #FFF;
+}
+
+.logo {
+    height: 200px;
+    width: 600px;
+}
+/* = = = = = = = = = = = = = = = = */
+/* MAIN CONTAINER                  */
+/* = = = = = = = = = = = = = = = = */
+.grid-box {
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.recent { grid-area: recent; }
+.main-1 { grid-area: main-1; }
+.main-2 { grid-area: main-2; }
+.social { grid-area: social; }
+.about { grid-area: about;   }
+
+
+.main-container {
+    display: grid;
+    grid-template-areas: 
+    'recent recent recent'
+    'main-1 main-1 social'
+    'main-2 main-2 about';
+    gap: 1rem;
+    padding: 20px;
+}
+
