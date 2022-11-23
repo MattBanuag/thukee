@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*========================*/
+/* BROWSER STYLE RESET   */
+/*========================*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  outline: none;
+  border-style: none;
+  vertical-align: baseline;
+  color: #FFF;
+}
+
+html {
+  height: 100%;
+  font-family: 'Space Mono', monospace;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  background-color: #0F0E0E;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+li, a, i, figure, img, button,
+input[type=button], input[type=submit] {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+input, textarea, button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type=button], input[type=submit], input[type=clear], button, a {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*============================*/
+/* BASIC STYLES               */
+/*============================*/
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+ul, li, a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+
+hr {
+  height: 3.5px;
+  margin: 2% 0;
+  background-color: #ff914d;
+  background-image: linear-gradient(90deg, #ff914d 0%, #03989e 100%);
+  }
+
+/*============================*/
+/* ANIMATIONS                 */
+/*============================*/
+.bounce {
+  position: fixed;
+  right: 4%;
+  bottom: 5%;
+  font-size: 30px;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+.disabled {
+  visibility: hidden;
+}
+
+@keyframes bounce {
+  0%, 50%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-15px);       }
+  75% { transform: translateY(-15px);       }
+}
+
