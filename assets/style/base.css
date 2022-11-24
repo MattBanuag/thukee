@@ -79,5 +79,10 @@ input[type=button], input[type=submit], input[type=clear], button, a {
 /* BASIC STYLES                    */
 /* = = = = = = = = = = = = = = = = */
 a {
+  font-size: 1.2rem;
   text-decoration: none;
+}
+
+figure {
+  text-align: center;
 }

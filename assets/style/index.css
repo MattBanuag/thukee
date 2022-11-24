@@ -11,13 +11,15 @@
 /* HEADER                          */
 /* = = = = = = = = = = = = = = = = */
 header {
+    position: fixed;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     height: 100vh;
-    padding: 50px 30px;
-    background-color: #191919;
+    padding: 20px 30px;
+    background-color: #222222;
 }
 
 header * {
@@ -26,30 +28,92 @@ header * {
 
 .logo {
     height: 200px;
-    width: 600px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.page-nav {
+    flex-direction: column;
+}
+
+.icon-nav, .page-nav {
+    display: flex;
+    gap: 10px;
 }
 /* = = = = = = = = = = = = = = = = */
 /* MAIN CONTAINER                  */
 /* = = = = = = = = = = = = = = = = */
+.main-container {
+    margin-left: 17vw;
+}
+
 .grid-box {
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: #FFF;
 }
 
-.recent { grid-area: recent; }
-.main-1 { grid-area: main-1; }
-.main-2 { grid-area: main-2; }
-.social { grid-area: social; }
-.about { grid-area: about;   }
+.banner { 
+    grid-area: banner; 
+    text-align: center;
+    background-color: #222222;
+}
+
+.banner a {
+    font-size: 1rem;
+    text-decoration: underline;
+    color: #FFF;
+}
+
+.recent { grid-area: recent;       }
+.main-1 { grid-area: main-1;       }
+.main-2 { grid-area: main-2;       }
+.main-3 { grid-area: main-3;       }
+.social { grid-area: social;       }
+.about { grid-area: about;         }
+.resources { grid-area: resources; }
 
 
 .main-container {
     display: grid;
     grid-template-areas: 
-    'recent recent recent'
-    'main-1 main-1 social'
-    'main-2 main-2 about';
+    'banner banner banner banner'
+    'recent recent recent recent'
+    'main-1 main-1 main-1 about'
+    'main-2 main-2 main-2 social'
+    'main-3 main-3 main-3 resources';
     gap: 1rem;
     padding: 20px;
 }
+/* = = = = = = = = = = = = = = = = */
+/* BLOG                            */
+/* = = = = = = = = = = = = = = = = */
+.blogs, .blog-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
+.blog-content {
+    flex-direction: column;
+}
+
+.blog-img {
+    height: 200px;
+    width: 650px;
+    border-radius: 5px;
+}
+
+.blog-share {
+    display: flex;
+    gap: 10px;
+}
+/* = = = = = = = = = = = = = = = = */
+/* RESOURCES                       */
+/* = = = = = = = = = = = = = = = = */
+.resources {
+    display: flex;
+    flex-direction: column;
+}
