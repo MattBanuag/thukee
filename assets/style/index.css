@@ -73,6 +73,7 @@ header * {
 .social { grid-area: social;       }
 .about { grid-area: about;         }
 .resources { grid-area: resources; }
+.footer { grid-area: footer; }
 
 
 .main-container {
@@ -80,10 +81,12 @@ header * {
     grid-template-areas: 
     'banner banner banner banner'
     'recent recent recent recent'
-    'main-1 main-1 main-1 about'
-    'main-2 main-2 main-2 social'
-    'main-3 main-3 main-3 resources';
-    gap: 1rem;
+    'main-1 main-1 main-1 social'
+    'main-2 main-2 main-2 about'
+    'main-3 main-3 main-3 about'
+    'resources resources resources resources'
+    'footer footer footer footer';
+    gap: 10px;
     padding: 20px;
 }
 /* = = = = = = = = = = = = = = = = */
@@ -115,5 +118,27 @@ header * {
 /* = = = = = = = = = = = = = = = = */
 .resources {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.resources-card {
+    width: 280px;
+    height: 350px;
+    border-radius: 5px;
+    background-color: #D1D1D1;
+}
+
+/* = = = = = = = = = = = = = = = = */
+/* FOOTER                          */
+/* = = = = = = = = = = = = = = = = */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+}
+
+.footer p {
+    color: #FFF;
 }
