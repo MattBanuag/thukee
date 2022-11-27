@@ -118,6 +118,13 @@ header * {
 /* = = = = = = = = = = = = = = = = */
 .resources {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.resources div {
+    display: flex;
     justify-content: space-between;
     gap: 10px;
 }
@@ -128,7 +135,6 @@ header * {
     border-radius: 5px;
     background-color: #D1D1D1;
 }
-
 /* = = = = = = = = = = = = = = = = */
 /* FOOTER                          */
 /* = = = = = = = = = = = = = = = = */
@@ -141,4 +147,14 @@ header * {
 
 .footer p {
     color: #FFF;
+}
+/* = = = = = = = = = = = = = = = = */
+/* MEDIA QUERY                     */
+/* = = = = = = = = = = = = = = = = */
+/* 768px and down */
+@media (max-width: 1045px) {
+    header {
+        width: 100%;
+        position: static;
+    }
 }
