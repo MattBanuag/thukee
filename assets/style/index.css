@@ -1,38 +1,54 @@
 @import './base.css';
 /* = = = = = = = = = = = = = = = = */
-/* BANNER                          */
+/* HEADER                          */
 /* = = = = = = = = = = = = = = = = */
-.banner {
-    padding: 5px;
-    text-align: center;
-    background-color: #004AAD;
+header {
+    position: fixed;
 }
-/* = = = = = = = = = = = = = = = = */
-/* GRID                            */
-/* = = = = = = = = = = = = = = = = */
-/* GRID AREAS */
-.blog-box-1 { grid-area: blog-box-1; }
-.blog-box-2 { grid-area: blog-box-2; }
-.blog-box-3 { grid-area: blog-box-3; }
-.blog-box-4 { grid-area: blog-box-4; }
-.about-me-box { grid-area: about-me-box; }
-.follow-me-box { grid-area: follow-me-box; }
 
-.grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-areas: 
-    'blog-box-1 blog-box-1 blog-box-1 about-me-box'
-    'blog-box-2 blog-box-2 blog-box-2 about-me-box'
-    'blog-box-3 blog-box-3 blog-box-3 about-me-box'
-    'blog-box-4 blog-box-4 blog-box-4 follow-me-box'
-    ;
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 15vw;
+    height: 100vh;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #191919;
+}
+
+header nav article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* = = = = = = = = = = = = = = = = */
+/* MAIN CONTAINER                  */
+/* = = = = = = = = = = = = = = = = */
+.main-container {
+    width: calc(100vw - 15vw);
+    height: 100vh;
+    margin-left: auto;
     padding: 30px 80px;
+    background-color: #000;
 }
-/* = = = = = = = = = = = = = = = = */
-/* BLOG BOXES                      */
-/* = = = = = = = = = = = = = = = = */
-.box {
-    padding: 15px;
-    border-radius: 8px;
+
+.main-container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.main-container nav ul+ul {
+    display: flex;
+    gap: 15px;
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

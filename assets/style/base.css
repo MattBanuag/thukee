@@ -18,7 +18,7 @@
 
 html {
   height: 100%;
-  font-family: 'Rubik', sans-serif;  
+  font-family: 'Quicksand', sans-serif;
   font-size: 100%;
   font-weight: 400;
   line-height: 1.5;
@@ -29,7 +29,7 @@ html {
 
 body {
   height: 100vh;
-  background-color: #0F0E0E;
+  background-color: #FFF;
 }
 
 ul, ol {
@@ -80,6 +80,8 @@ input[type=button], input[type=submit], input[type=clear], button, a {
 /* = = = = = = = = = = = = = = = = */
 a, i {
   font-size: 1.1rem;
+  font-weight: 700;
   text-decoration: none;
   color: #FFF;
 }
+
