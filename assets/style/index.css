@@ -3,158 +3,41 @@
 /* WRAPPER                         */
 /* = = = = = = = = = = = = = = = = */
 .wrapper {
-    display: flex;
-    justify-content: space-between;
+
 }
 
 /* = = = = = = = = = = = = = = = = */
-/* HEADER                          */
+/* HEADER & BANNER                 */
 /* = = = = = = = = = = = = = = = = */
 header {
-    position: fixed;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    height: 100vh;
-    padding: 20px 30px;
-    background-color: #222222;
+    width: 100%;
+    padding: 10px 60px;
 }
 
 header * {
-    color: #FFF;
+    color: #000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
-.page-nav {
-    flex-direction: column;
-}
-
-.icon-nav, .page-nav {
-    display: flex;
-    gap: 10px;
+.banner {
+    padding: 5px;
+    text-align: center;
+    background-color: #277BC0;
 }
 /* = = = = = = = = = = = = = = = = */
 /* MAIN CONTAINER                  */
 /* = = = = = = = = = = = = = = = = */
-.main-container {
-    margin-left: 17vw;
-}
-
-.grid-box {
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: #FFF;
-}
-
-.banner { 
-    grid-area: banner; 
-    text-align: center;
-    background-color: #222222;
-}
-
-.banner a {
-    font-size: 1rem;
-    text-decoration: underline;
-    color: #FFF;
-}
-
-.recent { grid-area: recent;       }
-.main-1 { grid-area: main-1;       }
-.main-2 { grid-area: main-2;       }
-.main-3 { grid-area: main-3;       }
-.social { grid-area: social;       }
-.about { grid-area: about;         }
-.resources { grid-area: resources; }
-.footer { grid-area: footer; }
-
-
-.main-container {
-    display: grid;
-    grid-template-areas: 
-    'banner banner banner banner'
-    'recent recent recent recent'
-    'main-1 main-1 main-1 social'
-    'main-2 main-2 main-2 about'
-    'main-3 main-3 main-3 about'
-    'resources resources resources resources'
-    'footer footer footer footer';
-    gap: 10px;
-    padding: 20px;
-}
-/* = = = = = = = = = = = = = = = = */
-/* BLOG                            */
-/* = = = = = = = = = = = = = = = = */
-.blogs, .blog-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.blog-content {
-    flex-direction: column;
-}
-
-.blog-img {
-    height: 200px;
-    width: 650px;
-    border-radius: 5px;
-}
-
-.blog-share {
-    display: flex;
-    gap: 10px;
-}
-/* = = = = = = = = = = = = = = = = */
-/* RESOURCES                       */
-/* = = = = = = = = = = = = = = = = */
-.resources {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.resources div {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.resources-card {
-    width: 280px;
-    height: 350px;
-    border-radius: 5px;
-    background-color: #D1D1D1;
-}
-/* = = = = = = = = = = = = = = = = */
-/* FOOTER                          */
-/* = = = = = = = = = = = = = = = = */
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222222;
-}
-
-.footer p {
-    color: #FFF;
-}
-/* = = = = = = = = = = = = = = = = */
-/* MEDIA QUERY                     */
-/* = = = = = = = = = = = = = = = = */
-/* 768px and down */
-@media (max-width: 1045px) {
-    header {
-        width: 100%;
-        position: static;
-    }
-}
