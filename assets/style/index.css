@@ -1,43 +1,38 @@
 @import './base.css';
 /* = = = = = = = = = = = = = = = = */
-/* WRAPPER                         */
+/* BANNER                          */
 /* = = = = = = = = = = = = = = = = */
-.wrapper {
-
-}
-
-/* = = = = = = = = = = = = = = = = */
-/* HEADER & BANNER                 */
-/* = = = = = = = = = = = = = = = = */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    padding: 10px 60px;
-}
-
-header * {
-    color: #000;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    height: 50px;
-    width: 50px;
-}
-
 .banner {
     padding: 5px;
     text-align: center;
-    background-color: #277BC0;
+    background-color: #004AAD;
 }
 /* = = = = = = = = = = = = = = = = */
-/* MAIN CONTAINER                  */
+/* GRID                            */
 /* = = = = = = = = = = = = = = = = */
+/* GRID AREAS */
+.blog-box-1 { grid-area: blog-box-1; }
+.blog-box-2 { grid-area: blog-box-2; }
+.blog-box-3 { grid-area: blog-box-3; }
+.blog-box-4 { grid-area: blog-box-4; }
+.about-me-box { grid-area: about-me-box; }
+.follow-me-box { grid-area: follow-me-box; }
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    'blog-box-1 blog-box-1 blog-box-1 about-me-box'
+    'blog-box-2 blog-box-2 blog-box-2 about-me-box'
+    'blog-box-3 blog-box-3 blog-box-3 about-me-box'
+    'blog-box-4 blog-box-4 blog-box-4 follow-me-box'
+    ;
+    padding: 30px 80px;
+}
+/* = = = = = = = = = = = = = = = = */
+/* BLOG BOXES                      */
+/* = = = = = = = = = = = = = = = = */
+.box {
+    padding: 15px;
+    border-radius: 8px;
+}
