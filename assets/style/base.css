@@ -13,7 +13,7 @@
   outline: none;
   border-style: none;
   vertical-align: baseline;
-  color: #FFF;
+  color: #000;
 }
 
 html {
@@ -29,8 +29,7 @@ html {
 
 body {
   height: 100vh;
-  padding: 15px 150px;
-  background-color: #151515;
+  background-color: #FFF;
 }
 
 ul, ol {
@@ -83,7 +82,6 @@ a, i {
   font-size: 1.1rem;
   font-weight: 700;
   text-decoration: none;
-  color: #FFF;
 }
 
 h1 {
