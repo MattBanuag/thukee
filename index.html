@@ -10,7 +10,7 @@
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
 
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,15 +21,21 @@
         <script src="assets/script/index.js" defer></script>
     </head>
     <body>
+        <div class="banner">
+            <article>
+                <a href="#">Learn LINUX now!</a>
+            </article>
+        </div>
+
         <main class="wrapper">
             <header>
                 <nav>
                     <ul>
                         <figure>
-                            <img src="assets/media/Logo.png" alt="">
+                            <img src="assets/media/penguin.png" alt="" class="logo">
                         </figure>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Resources</a></li>
+                        <li><a href="#resources">Resources</a></li>
                         <li><a href="#">About</a></li>
                     </ul>
                 </nav>
@@ -49,7 +55,7 @@
                         </li>
             
                         <li>
-                             <a href="https://github.com/boyetece/rbanuag" target="_blank"><i class="fa-brands fa-github"></i></a>
+                             <a href="https://github.com/boyetece/" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </li>
 
                         <button class="open-dialog">Let's talk</button>
@@ -58,19 +64,309 @@
             </header>
 
             <div class="main-content">
-                <i class="fa-solid fa-circle-left arrows"></i>
+                <i class="fa-solid fa-circle-left arrows left-arrow"></i>
                 
-                <div class="forum-box">
-                    <h1>Hello World</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Deserunt quia quidem, ipsam atque quae magni odit tempora, 
-                        ex id rem vero ratione excepturi consequatur assumenda in 
-                        architecto fuga cumque esse.
-                    </p>
+                <div class="forum">
+                    <div class="forum-container">
+                        <h1 id="selinux-">SELINUX:</h1>
+                        <small>December 6, 2022 by Rodolfo B.</small>
+                        <p>Is a labeling system. Every process has a label. Every file, directory, system object has a label. Policy rules control access between labeled processes and labeled objects.</p>
+                        <p>There are default Policies already installed for the following:</p>
+                        <ol>
+                        <li>Users</li>
+                        <li>Files</li>
+                        <li>Directories</li>
+                        <li>Memories</li>
+                        <li>Sockets</li>
+                        <li>Ports
+                        etc...</li>
+                        </ol>
+                        <p>Type of Policy:</p>
+                        <ol>
+                        <li>Targeted - this is the default policy applied.</li>
+                        <li>MLS - multi-level/muliti-category security - only see it in mlitary or complex security requirements.</li>
+                        </ol>
+                        <p>Two important concepts of selinux:</p>
+                        <ol>
+                        <li><p>Labeling - Files, Process, ports, etc..,are all labeled with an selinux context.</p>
+                        <ul>
+                        <li>For files and directories, these labels are stores as extended attributes on the filesystem using <code>-Z</code> option on the commands.</li>
+                        <li>For processes and ports, etc..,the kernel manages these labels.</li>
+                        <li>Format is as follows:<pre><code>                  `<span class="hljs-selector-tag">user</span><span class="hljs-selector-pseudo">:role</span><span class="hljs-selector-pseudo">:type</span><span class="hljs-selector-pseudo">:level(optional)</span>`
+                        </code></pre>Note: We will focus on the <code>type</code>, as <code>user,role and level</code> are used in more advanced implementation.</li>
+                        </ul>
+                        </li>
+                        <li><p>Enforcement - This is the enforcement that the labeling is pointing. It defines what kind of enforcement the the labeling context has access to 
+                        <strong>&quot;A process running with the label httpd_t can have read access to a file labeled httpd_config_t&quot; </strong> type.</p>
+                        </li>
+                        </ol>
+                        <h2 id="common-commands-">Common Commands:</h2>
+                        <table>
+                        <thead>
+                        <tr>
+                        <th>Command</th>
+                        <th>Option</th>
+                        <th>Option</th>
+                        <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td>restorecon</td>
+                        <td></td>
+                        <td></td>
+                        <td>This is use when you copy a file to the directory that has a predefined selinux context, so that the new file will have the same selinux context on the directory.</td>
+                        </tr>
+                        <tr>
+                        <td>chcon</td>
+                        <td></td>
+                        <td></td>
+                        <td>This is use when you want to define an selinux context of a file within the new directory created.</td>
+                        </tr>
+                        <tr>
+                        <td>semanage port</td>
+                        <td></td>
+                        <td></td>
+                        <td>This is use when you want to add a new port other that that defined in the default selinux policy.</td>
+                        </tr>
+                        <tr>
+                        <td>semanage fcontext</td>
+                        <td></td>
+                        <td></td>
+                        <td>This is use when you want to define the same selinux context on files  created within the new directory.</td>
+                        </tr>
+                        <tr>
+                        <td>sestatus</td>
+                        <td>0 or 1</td>
+                        <td></td>
+                        <td>display selinux status <code>ENFORCING, PERMISSIVE OR DISABLED</code></td>
+                        </tr>
+                        <tr>
+                        <td>setsebool</td>
+                        <td></td>
+                        <td></td>
+                        <td>sets selinux policy, that are defaultly defined <code>0</code> or <code>1</code></td>
+                        </tr>
+                        <tr>
+                        <td>getsebool</td>
+                        <td>-a</td>
+                        <td></td>
+                        <td>displays selinux policy, that are defaultly defined</td>
+                        </tr>
+                        <tr>
+                        <td>getenforce</td>
+                        <td>0 or 1</td>
+                        <td></td>
+                        <td>display selinux status <code>ENFORCING, PERMISSIVE OR DISABLED</code></td>
+                        </tr>
+                        <tr>
+                        <td>setenforce</td>
+                        <td>0 or 1</td>
+                        <td></td>
+                        <td>sets selinux status <code>ENFORCING, PERMISSIVE OR DISABLED</code></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <h2 id="how-to-check-on-what-policy-the-system-is-set-on-enforcing-permissive-or-disabled-in-three-ways-">How to check on what policy the system is set on (ENFORCING, PERMISSIVE OR DISABLED) in three ways:</h2>
+                        <pre><code>server~<span class="hljs-symbol">$</span> cat /etc/selinux/config
+                        <span class="hljs-keyword">OR</span>
+                        server~<span class="hljs-symbol">$</span> sestatus
+                        <span class="hljs-keyword">OR</span>
+                        server~<span class="hljs-symbol">$</span> getenforce
+                        </code></pre><h2 id="how-do-we-deals-with-labels-">How do we deals with labels:</h2>
+                        <pre><code><span class="hljs-keyword">server</span>~$ ls -lZ
+                        <span class="hljs-keyword">server</span>~$ id -Z
+                        <span class="hljs-keyword">server</span>~$ ps -Z
+                        <span class="hljs-keyword">server</span>~$ netstat -Z
+                        <span class="hljs-keyword">server</span>~$ cp -Z
+                        <span class="hljs-keyword">server</span>~$ mkdir -Z
+                        
+                        <span class="hljs-keyword">server</span>~$ chcon [change context]
+                        <span class="hljs-keyword">server</span>~$ restorecon [restore context]
+                        </code></pre><p>Note: </p>
+                        <ol>
+                        <li>Context are set when files are created,based on their parent directory&#39;s context (with few exceptions).</li>
+                        <li>RPM&#39;s can set contexts as part of the installation.</li>
+                        <li>Login process sets the default context (unconfined in the targeted policy).</li>
+                        </ol>
+                        <h2 id="semanage-command-can-be-used-to-manage-label-selinux-settings-for-the-following-">semanage command can be used to manage/label SELinux settings for the following:</h2>
+                        <ol>
+                        <li>login</li>
+                        <li>user</li>
+                        <li>port</li>
+                        <li>interface</li>
+                        <li>module</li>
+                        <li>node</li>
+                        <li>file context</li>
+                        <li>boolean</li>
+                        <li>permissive state</li>
+                        <li>dontaudit</li>
+                        </ol>
+                        <h2 id="selinux-errors-">SELinux Errors:</h2>
+                        <ol>
+                        <li>It could mean that the labels are wrong</li>
+                        <li>It could mean that the policy needed to be tweak on booleans, policy modules.</li>
+                        <li>There could be a bug in the policy.</li>
+                        <li>Or worst youcould be under attack.</li>
+                        </ol>
+                        <p>For Booleans:
+                        Booleans are just off/on settings for SELinux policy on the system. So how do we list SELinux default Policies defined on an active linux system?</p>
+                        <pre><code><span class="hljs-keyword">server</span>~$ getsebool -a
+                        </code></pre><p>Note: There are a hundreds selinux default policies defined on an active linux system. Piping a <code>grep</code> command will help narrow a particular search.</p>
+                        <p>Special Note: Setup a development environment in developing a selinux policy module. And the tools would greatly help diagnose and fix SELinux issues. Modules that would be needed are:</p>
+                        <p><code>server~$ dnf install setroubleshoot setroubleshoot-server</code></p>
+                        <p>and restart the <code>auditd</code> service.</p>
+                        <h2 id="examples-1-">Examples 1:</h2>
+                        <p>A developer luke wants to have his own web page in the /home/luke/public on the webserver.</p>
+                        <pre><code>-<span class="ruby"> Admin enabled the <span class="hljs-string">`UserDir`</span> <span class="hljs-keyword">in</span> the <span class="hljs-string">`/etc/httpd/conf.d/userdir.conf`</span>
+                        </span>-<span class="ruby"> change to permission o+x to /home/luke directory.
+                        </span>-<span class="ruby"> Admin restart the web server
+                        </span>-<span class="ruby"> But is did <span class="hljs-keyword">not</span> parse the index.php of luke.</span>
+                        </code></pre><p>What needs to be done here? If we try checking the following logs for the httpd:</p>
+                        <pre><code>- /<span class="hljs-built_in">var</span>/<span class="hljs-keyword">log</span>/httpd/access.<span class="hljs-keyword">log</span>
+                        - /<span class="hljs-built_in">var</span>/<span class="hljs-keyword">log</span>/https/error_log
+                        </code></pre><p>you will notice that it doesn&#39;t help much except there&#39;s a permission error. Now if we use the journal control log <code>server~$ journalctl -b -0</code>. We see the exact error on this issue in a bright red letters and more troubleshooting suggestions too.(This only comes out when you install <code>setroubleshoot</code> and <code>setroubleshoot-server</code>).
+                        The first option tofix it would be:</p>
+                        <p><code>server~$ setsebool -P httpd_enabled_homedirs=1</code></p>
+                        <p>This policy is already predefined but not set and all we have to do is enable it.</p>
+                        <h2 id="examples-2-">Examples 2:</h2>
+                        <p>A new sysadmin just inherited a new linux system, how can he know what the previous admin what boolean have been set manualy? He can check it inside the:</p>
+                        <p><code>server~$ cat /etc/selinux/targeted/modules/active/booleans.local</code></p>
+                        <p>Note: Don&#39;t edit this directory because when <code>setsebool -P</code> command was used it will just be regenerated after. Editing it won&#39;t do anything.</p>
+                        <h2 id="examples-3-">Examples 3:</h2>
+                        <p>A new Linux system was installed with unmodified SELinux environment. A developer has a /home/mark/ directory that he wanted to serve on the webserver.</p>
+                        <pre><code>- Admin move <span class="hljs-keyword">the</span> index.html <span class="hljs-built_in">file</span> <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> /var/www/html/
+                        - Change <span class="hljs-built_in">to</span> permission o+x <span class="hljs-built_in">to</span> /home/luke <span class="hljs-built_in">directory</span>.
+                        - Admin restart <span class="hljs-keyword">the</span> web server
+                        - But is did <span class="hljs-keyword">not</span> parse <span class="hljs-keyword">the</span> index.php <span class="hljs-keyword">of</span> mark.
+                        </code></pre><p>The First issue here is the <code>mv</code> command for move, will retain the ownership of the file. Thus creating permission issue when moved to /var/www/html/ directory.
+                        But even if permission is change accordingly this does not fix the issue as SELinux must be set properly to be able to parse the php content of mark.
+                        Again checking the log files:</p>
+                        <p><code>server~$ journalctl -b -0</code></p>
+                        <p>As we check it the context now is different from the previous example. It&#39;s because the move command retained the context of the user even though we change the ownership of the file, it didn&#39;t change the context which is supposed to be <code>httpd_sys_content_t</code> instead we get <code>user_home_t</code> context. As usual the log will give troubleshooting suggestions. Butwe can so this in multiple ways.</p>
+                        <ol>
+                        <li><p><code>server~$ chcon -u system_u -r object_r -t httpd_system_content_t /var/www/html/index.html</code></p>
+                        </li>
+                        <li><p><code>server~$ chcon -t httpd_sys_content_t /var/www/html/index.html</code></p>
+                        </li>
+                        <li><p><code>server~$ chcon --reference /var/www/html/ /var/www/html/index.html</code></p>
+                        </li>
+                        <li><p><code>server~$ restorecon -vR /var/www/html/</code></p>
+                        </li>
+                        </ol>
+                        <p>Note: <code>restorecon</code> relies on information from the <code>/etc/selinux/targeted/context/files/file_contexts</code> to determine what a file or directory&#39;s default context should be. And there 4000 entries in this file. Don&#39;t modify.</p>
+                        <h2 id="examples-3-">Examples 3:</h2>
+                        <p>Putting webserver files on non-standard <code>/data/public</code> directoryand permissions are set correctly. Then admin define the virtual web site in the httpd.conf and restart the httpd service. But then the <code>/data/public/index.html</code> isn&#39;t parse.
+                        Again checking the log files:</p>
+                        <p><code>server~$ journalctl -b -0</code></p>
+                        <p>But this time the options for appropriate context are too many to choose. But since the admin know he&#39;s&#39; working on a webserver using <code>httpd_sys_content_t</code> would be appropriate.</p>
+                        <p><code>server~$ semanage fcontext -a -t httpd_sys_content_t &quot;/data(/.*)?&quot;</code>
+                        <code>server~$ restorecon -vR /data</code></p>
+                        <p>OR</p>
+                        <p><code>server~$ semanage fcontext -a -e /var/www/html /data</code>
+                        <code>server~$ restorecon -vR /data</code></p>
+                        <h2 id="example-4-">Example 4:</h2>
+                        <p>Adding non-standard network port 82 to SELinux context database for httpd service.</p>
+                        <p><code>server~$ semanage port -l | grep ^httpd_port</code></p>
+                        <p><code>server~$ semanage port -a -t httpd_port_t -p tcp 82</code></p>
+                        <p>To delete a network port 82 from the SELinux context database.</p>
+                        <p><code>server~$ semanage port -d -p tcp 82</code></p>
+                        <h1 id="policy-module-">Policy Module:</h1>
+                        <p>When everything isn&#39;t working for a new installed software on Linux system. We can create a policy module for this.
+                        We can always check the <code>journalctl -b -0</code> to check the errors and we&#39;ll start from there.</p>
+                        <p>If you have confirmed that the SELinux is the cause of the new software not working as it should be. Set the SELinux to &#39;permissive mode&#39; and run software as it should be.</p>
+                        <p>Then execute the <code>journalctl -b -0</code> again. From here, it will tell you how to fix the issue by giving a suggestions.
+                        Then &#39;enable&#39; it back and run again the software with errors on it.</p>
+                        <p><code>server~$ setenforce 1</code></p>
+                        <h2 id="enabling-selinux">Enabling SELinux</h2>
+                        <ul>
+                        <li>To enable SELinux, edit <code>/etc/selinux/config</code> and set <code>SELINUX=permissive</code></li>
+                        <li>Create a file <code>server~$ touch / .autorelabel</code></li>
+                        <li>Reboot the machine</li>
+                        </ul>
+                        <p><a href="https://www.youtube.com/watch?v=_WOKRaM-HI4&amp;t=614s">REFERENCE</a></p>
+                    </div>
+
+                    <i class="fa-solid fa-circle-right arrows right-arrow"></i>
                 </div>
 
-                <i class="fa-solid fa-circle-right arrows"></i>
+                <div id="resources">
+                    <div class="box resource-box">
+                        <figure>
+                            <img src="assets/media/ansible.png" alt="">
+                        </figure>
+
+                        <article>
+                            <h2>Ansible</h2>
+                            <p>
+                                Ansible is a radically simple IT automation engine that automates cloud provisioning,
+                                configuration management, application deployment, 
+                                intra-service orchestration, and many other IT needs.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="box resource-box">
+                        <figure>
+                            <img src="assets/media/learnlinux-tv.png" alt="">
+                        </figure>
+
+                        <article>
+                            <h2>Learn LINUX TV</h2>
+                            <p>
+                                Learn Linux TV is a popular YouTube channel that aims to provide Linux-related content, 
+                                focusing on learning. The channel features Linux tutorials, distribution reviews, complete guides, and more.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="box resource-box">
+                        <figure>
+                            <img src="assets/media/privacy-tools.svg" alt="">
+                        </figure>
+
+                        <article>
+                            <h2>Privacy-Tools</h2>
+                            <p>
+                                PrivacyTools.io provides services, tools and privacy guides to counter global mass surveillance. 
+                                Established in 2015 after Edward Snowden's revelations and is now the most popular guide for Privacy Tools.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="box resource-box">
+                        <figure>
+                            <img src="assets/media/linux-02.png" alt="">
+                        </figure>
+
+                        <article>
+                            <h2>LINUX</h2>
+                            <p>
+                                LINUX is a radically simple IT automation engine that automates cloud provisioning,
+                                configuration management, application deployment, 
+                                intra-service orchestration, and many other IT needs.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="about">
+                    <article>
+                        <h2>About Thukee</h2>
+                        <p>
+                            Linux operating system is everywhere. But besides being the platform of choice to run desktops,
+                           servers, and embedded systems across the globe, Linux is one of the most reliable, secure operating systems 
+                           available. It has evolved into one of the most reliable computer ecosystems with a reliability and zero cost of ownership. 
+                           It is distributed under an open source license which means freedom to run the program, for any purpose, freedom to study 
+                           how the program works, and change it to make it do what you wish, freedom to redistribute copies, freedom to distribute 
+                           copies of your modified versions to others. These tenants are also a main factor in why many people choose Linux. Let's learn together!
+                        </p>
+                    </article>
+
+                    <figure>
+                        <img src="assets/media/penguin.png" alt="Logo">
+                    </figure>
+                </div>
             </div>
         </main>
     </body>
