@@ -13,7 +13,7 @@
   outline: none;
   border-style: none;
   vertical-align: baseline;
-  color: #000;
+  color: #FFF;
 }
 
 html {
@@ -29,7 +29,7 @@ html {
 
 body {
   height: 100vh;
-  background-color: #FFF;
+  background-color: #100F0F;
 }
 
 ul, ol {
@@ -82,6 +82,7 @@ a, i {
   font-size: 1.1rem;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
 }
 
 h1 {
@@ -91,5 +92,16 @@ h1 {
 p {
   font-size: 1.2rem;
   line-height: 2rem;
+}
+
+.arrows {
+  font-size: 3rem;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: #F77E21;
 }
 
