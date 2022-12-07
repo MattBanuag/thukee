@@ -78,10 +78,14 @@ input[type=button], input[type=submit], input[type=clear], button, a {
 /* = = = = = = = = = = = = = = = = */
 /* BASIC STYLES                    */
 /* = = = = = = = = = = = = = = = = */
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
 a, i {
   font-size: 1.1rem;
   font-weight: 700;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -94,14 +98,36 @@ p {
   line-height: 2rem;
 }
 
+small {
+  font-size: 1rem;
+}
+
 .arrows {
+  position: fixed;
   font-size: 3rem;
+}
+
+.left-arrow {
+  top: 50%;
+  left: 8%;
+}
+
+.right-arrow {
+  top: 50%;
+  right: 8%;
 }
 
 button {
   padding: 10px;
   border-radius: 8px;
   font-weight: 700;
-  background-color: #F77E21;
+  background-color: #277BC0;
 }
+
+code {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #D61C4E;
+}
+
+
 
