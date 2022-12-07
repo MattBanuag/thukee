@@ -2,5 +2,45 @@
 /* = = = = = = = = = = = = = = = = */
 /* WRAPPER                         */
 /* = = = = = = = = = = = = = = = = */
+.wrapper {
+    padding: 15px 100px;
+}
 
+/* = = = = = = = = = = = = = = = = */
+/* HEADER                          */
+/* = = = = = = = = = = = = = = = = */
+header, header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+header article {
+    text-align: center;
+}
+
+header nav ul {
+    gap: 35px;
+}
+
+header nav+nav ul {
+    gap: 20px;
+}
+
+/* = = = = = = = = = = = = = = = = */
+/* MAIN-CONTENT                    */
+/* = = = = = = = = = = = = = = = = */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.forum-box {
+    width: 75%;
+    height: 75vh;
+    padding: 35px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.4);
+}
