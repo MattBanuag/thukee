@@ -102,9 +102,26 @@ header a {
 
 #about article {
     width: 50%;
+    margin-right: 30px;
+    text-align: justify;
 }
 
 #about img {
     width: 300px;
     height: 300px;
+}
+
+/* = = = = = = = = = = = = = = = = */
+/* FOOTER                          */
+/* = = = = = = = = = = = = = = = = */
+footer, footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer {
+    margin-top: 100px;
+    flex-direction: column;
 }
