@@ -1,127 +1,22 @@
 @import './base.css';
 /* = = = = = = = = = = = = = = = = */
-/* BANNER                          */
-/* = = = = = = = = = = = = = = = = */
-.banner {
-    width: 100vw;
-    padding: 10px;
-    text-align: center;
-    background-color: #035397;
-}
-
-/* = = = = = = = = = = = = = = = = */
 /* WRAPPER                         */
 /* = = = = = = = = = = = = = = = = */
-.wrapper {
-    padding: 15px 100px;
-}
+
 
 /* = = = = = = = = = = = = = = = = */
 /* HEADER                          */
 /* = = = = = = = = = = = = = = = = */
-header, header nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+    padding: 30px 150px;
+    font-family: 'Quicksand', sans-serif;
 }
 
-header article {
-    text-align: center;
+header nav {
+    justify-content: space-between;
+    width: 100%;
 }
 
 header nav ul {
-    gap: 35px;
-}
-
-header nav+nav ul {
     gap: 20px;
-}
-
-header a {
-    text-decoration: none;
-}
-
-/* = = = = = = = = = = = = = = = = */
-/* MAIN-CONTENT                    */
-/* = = = = = = = = = = = = = = = = */
-.main-content, #resources, #about {
-    margin-top: 50px;
-}
-
-/* FORUM */
-.forum {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.forum-container {
-    width: 75%;
-    padding: 35px;
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.forum-container p {
-    margin-top: 30px;
-}
-
-/* RESOURCES */
-#resources {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.resource-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    padding: 20px 0;
-    border-bottom: 1px solid #FFF;
-    cursor: pointer;
-}
-
-.resource-box article {
-    width: 75%;
-}
-
-.resource-box img {
-    width: 150px;
-    height: 150px;
-}
-
-/* ABOUT */
-#about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#about article {
-    width: 50%;
-    margin-right: 30px;
-    text-align: justify;
-}
-
-#about img {
-    width: 300px;
-    height: 300px;
-}
-
-/* = = = = = = = = = = = = = = = = */
-/* FOOTER                          */
-/* = = = = = = = = = = = = = = = = */
-footer, footer nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-footer {
-    margin-top: 100px;
-    flex-direction: column;
 }
