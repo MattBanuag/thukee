@@ -13,7 +13,7 @@
   outline: none;
   border-style: none;
   vertical-align: baseline;
-  color: #FFF;
+  color: #100F0F;
 }
 
 html {
@@ -29,7 +29,7 @@ html {
 
 body {
   height: 100vh;
-  background-color: #100F0F;
+  background-color: #FFF;
 }
 
 ul, ol {

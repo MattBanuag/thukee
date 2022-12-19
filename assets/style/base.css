@@ -7,10 +7,14 @@ a {
     text-decoration: none;
 }
 
+h3 {
+    font-size: 2rem;
+}
+
 /* = = = = = = = = = = = = = = = = */
 /* FLEXBOX                         */
 /* = = = = = = = = = = = = = = = = */
-header nav, header ul {
+.banner, header nav, header ul, .main, .blog-card, .blog-info {
     display: flex;
     align-items: center;
 }
