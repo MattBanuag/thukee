@@ -4,17 +4,17 @@
 /* = = = = = = = = = = = = = = = = */
 a {
     font-weight: 700;
-    text-decoration: none;
+    color: #0b8fed;
 }
 
-h3 {
+h2 {
     font-size: 2rem;
 }
 
 /* = = = = = = = = = = = = = = = = */
 /* FLEXBOX                         */
 /* = = = = = = = = = = = = = = = = */
-.banner, header nav, header ul, .main, .blog-card, .blog-info {
+.banner, header, header nav ul, .main-content, .blog-info div {
     display: flex;
     align-items: center;
 }
