@@ -12,7 +12,7 @@ p {
     text-align: justify;
 }
 
-h2, h3 {
+h2, h3, code * {
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -26,6 +26,12 @@ button {
     font-size: 1rem;
     font-weight: 700;
     color: #FFF;
+}
+
+code {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #EEE;
 }
 
 a h2:hover, a h4:hover, a:hover, a i:hover {
