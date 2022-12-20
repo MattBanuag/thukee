@@ -9,6 +9,7 @@ const hiddenBlogs = Array.from(selectAll('.hidden'));
 // EVENT LISTENERS
 onEvent('click', seeMoreBtn, () => {
     loader.classList.remove('hidden');
+    seeMoreBtn.classList.add('hidden');
     setInterval(() => {
         hiddenBlogs.forEach((blog) => {
             blog.classList.remove('hidden');
