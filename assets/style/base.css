@@ -3,12 +3,20 @@
 /* BASE STYLES                     */
 /* = = = = = = = = = = = = = = = = */
 a {
+    text-decoration: none;
     font-weight: 700;
     color: #0b8fed;
 }
 
-h2 {
+p {
+    text-align: justify;
+}
+
+h2, h3 {
     font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
     font-size: 2rem;
 }
 
@@ -20,11 +28,16 @@ button {
     color: #FFF;
 }
 
+a h2:hover, a h4:hover, a:hover, a i:hover {
+    color: #0b8fed;
+}
+
 /* = = = = = = = = = = = = = = = = */
 /* FLEXBOX                         */
 /* = = = = = = = = = = = = = = = = */
 .banner, header, header nav, header nav ul, 
-.blog-info div, .follow-card ul, footer {
+.blog-info div, .follow-card ul, .trending-item, 
+footer {
     display: flex;
     align-items: center;
 }
