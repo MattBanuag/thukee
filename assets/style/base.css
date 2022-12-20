@@ -8,13 +8,23 @@ a {
 }
 
 h2 {
+    font-family: 'Ubuntu', sans-serif;
     font-size: 2rem;
+}
+
+button {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FFF;
 }
 
 /* = = = = = = = = = = = = = = = = */
 /* FLEXBOX                         */
 /* = = = = = = = = = = = = = = = = */
-.banner, header, header nav ul, .main-content, .blog-info div {
+.banner, header, header nav, header nav ul, 
+.blog-info div, .follow-card ul, footer {
     display: flex;
     align-items: center;
 }
