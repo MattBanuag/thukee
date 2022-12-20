@@ -24,29 +24,46 @@
 /* = = = = = = = = = = = = = = = = */
 header {
     justify-content: space-between;
-    padding: 15px 90px;
+    padding: 25px 90px;
 }
 
 header nav ul {
     gap: 20px;
 }
 
+header a {
+    text-decoration: none;
+}
+
 header nav i {
     font-size: 1.1rem;
 }
 
-.bars {
-    font-size: 2rem;
+.logo {
+    font-size: 4rem;
     cursor: pointer;
+}
+
+.fa-suse {
+    color: #84c43b;
 }
 
 /* = = = = = = = = = = = = = = = = */
 /* MAIN                            */
 /* = = = = = = = = = = = = = = = = */
 .main-content {
-    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
     gap: 50px;
-    margin: 40px 90px;
+    margin-inline: 90px;
+}
+
+/* Left Column */
+.left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .blog-card {
@@ -57,15 +74,68 @@ header nav i {
 .blog-card article {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     width: 50vw;
 }
 
 .blog-img {
     width: calc(50vw - 90px);
-    height: 400px;
+    height: 300px;
 }
 
 .blog-info div {
     gap: 20px;
+}
+
+.see-more-btn {
+    background-color: #0b8fed;
+}
+
+/* Right Column */
+.right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 35%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-col h3 {
+    font-size: 1.5rem;
+}
+
+.follow-card ul {
+    gap: 20px;
+}
+
+.follow-card i {
+    font-size: 1.3rem;
+}
+
+.trending-item img {
+    width: 150px;
+    height: 100px;
+}
+
+
+/* = = = = = = = = = = = = = = = = */
+/* FOOTER                          */
+/* = = = = = = = = = = = = = = = = */
+footer {
+    justify-content: center;
+    width: 100vw;
+    margin-top: 60px;
+    padding: 15px 0;
+    background-color: #16151a;
+}
+
+footer * {
+    font-weight: 700;
+    color: #FFF;
 }
