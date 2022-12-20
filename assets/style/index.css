@@ -39,13 +39,14 @@ header nav i {
     font-size: 1.1rem;
 }
 
-.logo {
-    font-size: 4rem;
-    cursor: pointer;
+header nav a:hover {
+    opacity: 0.8;
 }
 
-.fa-suse {
-    color: #84c43b;
+.logo {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
 }
 
 /* = = = = = = = = = = = = = = = = */
@@ -103,11 +104,11 @@ header nav i {
 .card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .right-col h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .follow-card ul {
@@ -118,9 +119,31 @@ header nav i {
     font-size: 1.3rem;
 }
 
+.trending-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-item {
+    flex-direction: column;
+    gap: 15px;
+}
+
 .trending-item img {
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: 200px;
+}
+
+.trending-item h4 {
+    text-align: justify;
+}
+
+.resources-card ul {
+    list-style-type: square;
+}
+
+.resources-card a:hover {
+    text-decoration: underline;
 }
 
 
