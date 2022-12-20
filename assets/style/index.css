@@ -11,7 +11,7 @@
     justify-content: center;
     padding: 10px 0;
     font-family: 'Quicksand', sans-serif;
-    background-color: #16151a;
+    background-color: #0b8fed;
 }
 
 .banner * {
@@ -145,7 +145,6 @@ header nav a:hover {
 
 .trending-item {
     flex-direction: column;
-    gap: 15px;
 }
 
 .trending-item img {
@@ -187,7 +186,7 @@ footer {
     width: 100vw;
     margin-top: 60px;
     padding: 15px 0;
-    background-color: #16151a;
+    background-color: #0b8fed;
 }
 
 footer * {

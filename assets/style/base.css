@@ -31,10 +31,12 @@ button {
 code {
     border-radius: 5px;
     padding: 5px;
+    font-weight: 700;
     background-color: #EEE;
 }
 
-a h2:hover, a h4:hover, a:hover, a i:hover {
+a h2:hover, a h4:hover, header a:hover, .main-content a:hover, 
+a i:hover {
     color: #0b8fed;
 }
 
