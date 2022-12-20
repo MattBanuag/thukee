@@ -49,6 +49,10 @@ header nav a:hover {
     cursor: pointer;
 }
 
+.bars {
+    display: none;
+}
+
 /* = = = = = = = = = = = = = = = = */
 /* MAIN                            */
 /* = = = = = = = = = = = = = = = = */
@@ -157,6 +161,7 @@ header nav a:hover {
 }
 
 .resources-card ul {
+    padding-inline: 15px;
     list-style-type: square;
 }
 
@@ -192,4 +197,62 @@ footer {
 footer * {
     font-weight: 700;
     color: #FFF;
+}
+
+/* = = = = = = = = = = = = = = = = */
+/* MEDIA QUERIES                   */
+/* = = = = = = = = = = = = = = = = */
+@media (max-width: 1045px) {
+    header {
+        padding: 25px 20px;
+    }
+    
+    nav ul li a {
+        display: none;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bars {
+        display: inline-flex;
+        margin-left: 100px;
+        font-size: 1.6rem;
+    }
+
+    .main-content {
+        margin-inline: 20px;
+    }
+
+    .main-content, .blog-card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .blog-card {
+        gap: 0;
+    }
+
+    .blog-card+.blog-card {
+        margin-top: 15px;
+    }
+
+    .blog-card img, .blog-card article, .right-col {
+        width: 100%;
+    }
+    
+    .card {
+        width: 100%;
+    }
+
+    .resources-card ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        gap: 30px;
+        padding-inline: 15px;
+    }
 }
