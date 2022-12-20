@@ -88,6 +88,10 @@ header nav a:hover {
     gap: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 .see-more-btn {
     background-color: #0b8fed;
 }
