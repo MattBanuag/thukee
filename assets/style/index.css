@@ -3,22 +3,6 @@
 /* WRAPPER                         */
 /* = = = = = = = = = = = = = = = = */
 
-
-/* = = = = = = = = = = = = = = = = */
-/* BANNER                          */
-/* = = = = = = = = = = = = = = = = */
-.banner {
-    justify-content: center;
-    padding: 10px 0;
-    font-family: 'Quicksand', sans-serif;
-    background-color: #0b8fed;
-}
-
-.banner * {
-    color: #FFF;
-    text-decoration: underline;
-}
-
 /* = = = = = = = = = = = = = = = = */
 /* HEADER                          */
 /* = = = = = = = = = = = = = = = = */
@@ -61,7 +45,7 @@ header nav a:hover {
     display: flex;
     align-items: flex-start;
     gap: 50px;
-    margin: 25px 90px;
+    margin: 130px 90px 25px;
 }
 
 /* Left Column */
