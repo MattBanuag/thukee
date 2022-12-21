@@ -84,15 +84,15 @@ header nav a:hover {
 }
 
 .blog-img {
-    width: calc(50vw - 90px);
-    height: 300px;
+    width: calc(60vw - 90px);
+    height: auto;
 }
 
 .blog-info div {
     gap: 20px;
 }
 
-.hidden {
+.hidden, .blog-hidden {
     display: none;
 }
 
@@ -222,7 +222,8 @@ footer * {
 
     .bars {
         display: inline;
-        font-size: 1.6rem;
+        font-size: 2rem;
+        cursor: pointer;
     }
 
     .main-content {
@@ -245,6 +246,7 @@ footer * {
 
     .blog-card img, .blog-card article, .right-col {
         width: 100%;
+        height: auto;
     }
     
     .card {
@@ -259,3 +261,16 @@ footer * {
         padding-inline: 15px;
     }
 }
+
+/* = = = = = = = = = = = = = = = = */
+/* HAMBURGER                       */
+/* = = = = = = = = = = = = = = = = */
+.change {
+    display: block;
+    width: 200px;
+    height: 300px;
+    color: #FFF;
+    background-color: #0b8fed;
+}
+
+/* FIX NAV BAR */
