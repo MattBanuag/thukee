@@ -46,9 +46,25 @@ a i:hover {
 }
 
 /* = = = = = = = = = = = = = = = = */
+/* POSITION FIXED                  */
+/* = = = = = = = = = = = = = = = = */
+header, .nav-mobile {
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    top: 0;
+}
+
+.nav-mobile {
+    top: 12%;
+}
+
+/* = = = = = = = = = = = = = = = = */
 /* FLEXBOX                         */
 /* = = = = = = = = = = = = = = = = */
-.banner, header, header nav, header nav ul, 
+.banner,header, header nav, header nav ul, 
 .blog-info div, .follow-card ul, .trending-item, 
 footer {
     display: flex;
