@@ -53,7 +53,7 @@ a i:hover {
 /* FLEXBOX                         */
 /* = = = = = = = = = = = = = = = = */
 .banner, header, header nav, header nav ul, 
-.blog-info div, .follow-card ul, .trending-item, 
+.nav-mobile, .blog-info div, .follow-card ul, .trending-item, 
 footer {
     display: flex;
     align-items: center;
