@@ -12,10 +12,6 @@ a {
     color: #0b8fed;
 }
 
-p {
-    text-align: justify;
-}
-
 h2, h3, code * {
     font-family: 'Ubuntu', sans-serif;
 }
