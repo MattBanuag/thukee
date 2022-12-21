@@ -204,11 +204,20 @@ footer * {
 /* = = = = = = = = = = = = = = = = */
 @media (max-width: 1045px) {
     header {
+        width: 100%;
         padding: 25px 20px;
+    }
+
+    header figure {
+        flex-shrink: 0;
     }
     
     nav ul li a {
         display: none;
+    }
+
+    .logo {
+        width: 100%;
     }
 
     .bars {
