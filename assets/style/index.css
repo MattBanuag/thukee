@@ -212,8 +212,7 @@ footer * {
     }
 
     .bars {
-        display: inline-flex;
-        margin-left: 100px;
+        display: inline;
         font-size: 1.6rem;
     }
 
