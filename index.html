@@ -22,7 +22,9 @@
     <body>
         <main class="wrapper">
             <div class="banner">
-                <a href="#">Learn LINUX now!</a>
+                <a href="https://access.redhat.com/" target="_blank">
+                    Learn LINUX now!
+                </a>
             </div>
 
             <header>
@@ -34,11 +36,10 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Got Tips?</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#get-caught-up">Get caught up</a></li>
+                        <li><a href="#resources">Resources</a></li>
                         <i class="fa-solid fa-bars bars"></i>
                     </ul>
                 </nav>
@@ -46,11 +47,10 @@
 
             <div class="nav-mobile hidden">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Got Tips?</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#get-caught-up">Get caught up</a></li>
+                    <li><a href="#resources">Resources</a></li>
                 </ul>
 
                 <div class="social-links">
@@ -226,7 +226,7 @@
                 </div>
 
                 <div class="right-col">
-                    <article class="about-card card">
+                    <article id="about" class="about-card card">
                         <h3>About</h3>
                         <p>
                             Linux operating system is everywhere. But besides being the platform of choice 
@@ -237,7 +237,7 @@
                         </p>
                     </article>
 
-                    <div class="videos-card card">
+                    <div id="videos" class="videos-card card">
                         <h3>Videos</h3>
                         <iframe src="https://www.youtube.com/embed/Z6qw0Rsh9Rk" 
                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
@@ -245,7 +245,7 @@
                         </iframe>
                     </div>
 
-                    <div class="trending-card card">
+                    <div id="get-caught-up" class="trending-card card">
                         <h3>Get caught up</h3>
                         <div class="trending-item">
                             <figure>
@@ -281,7 +281,7 @@
                         </div>
                     </div>
 
-                    <div class="resources-card card">
+                    <div id="resources" class="resources-card card">
                         <h3>Resources</h3>
                         <ul>
                             <li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9" target="_blank">
@@ -291,7 +291,6 @@
                             <li><a href="https://www.ansible.com/" target="_blank">Ansible</a></li>
                             <li><a href="https://www.sandervanvugt.com/" target="_blank">Sander Van Vugt</a></li>
                             <li><a href="https://www.privacytools.io/" target="_blank">Privacy Tools</a></li>
-                            
                         </ul>
                     </div>
                 </div>                
