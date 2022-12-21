@@ -45,8 +45,8 @@ header nav a:hover {
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
 }
 
@@ -149,7 +149,7 @@ header nav a:hover {
 
 .trending-item img {
     width: 100%;
-    height: 200px;
+    height: auto;
 }
 
 .trending-item h4 {
