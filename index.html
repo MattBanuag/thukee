@@ -13,7 +13,7 @@
 
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        
         <!--LOGO, CSS & JavaScript-->
         <link rel="shortcut icon" href="assets/media/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/style/index.css" media="screen">
@@ -30,27 +30,36 @@
                     <figure>
                         <img src="assets/media/logo.png" alt="Penguin Logo" class="logo">
                     </figure>
-                    
+                </nav>
+                
+                <nav>
                     <ul class="nav-hidden">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Resources</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Got Tips?</a></li>
+                        <i class="fa-solid fa-bars bars"></i>
                     </ul>
-                </nav>
-                
-                <nav>
-                    <ul>
+                    <!-- <ul>
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
                         <li><a href="#"><i class="fa-solid fa-rss"></i></a></li>
-                        <i class="fa-solid fa-bars bars"></i>
-                    </ul>
+                    </ul> -->
                 </nav>
             </header>
+
+            <div class="nav-mobile hidden">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Got Tips?</a></li>
+                </ul>
+            </div>
 
             <div class="main-content">
                 <div class="left-col">
@@ -176,10 +185,10 @@
 
                     <div class="videos-card card">
                         <h3>Videos</h3>
-                        <!-- <iframe src="https://www.youtube.com/embed/Z6qw0Rsh9Rk" 
+                        <iframe src="https://www.youtube.com/embed/Z6qw0Rsh9Rk" 
                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe> -->
+                        </iframe>
                     </div>
 
                     <div class="trending-card card">
